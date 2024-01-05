@@ -1,0 +1,87 @@
+body
+{
+   background-color: rgb(20,20,20);
+}
+h1
+{
+    color: white;
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    position: absolute;
+    right: 5%;
+    z-index: 200;
+}
+#menu
+{
+    height: 100vh;
+    align-items: center;
+
+}
+#menu-items:hover > .menu-items
+{
+    opacity: 0.3;
+}
+#menu-items:hover > .menu-items:hover
+{
+    opacity: 1;
+}
+.menu-items
+{
+    color: white;
+    font-size: clamp(3rem,8vw,8rem);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem,0.5vw,1rem) 0 rem;
+    transition: opacity 400ms ease;
+    position:relative;
+    z-index:100;
+}
+#menu-items
+{
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+#menu-items:hover ~ #menu-background-pattern
+{
+    background-size: 11vmin 11vmin;
+    opacity: 0.5s;
+
+}
+#tiles
+{
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns),1fr);
+    grid-template-rows: repeat(var(--rows),1fr);
+    z-index: -1;
+    position:absolute;
+    z-index:-100;
+    margin:0px;
+    top:0;
+    left:0;
+}
+.tile
+{
+     
+}
+.image {
+    width: 40vmin;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: -500;
+  }
+  
+  .image[data-status="inactive"] {
+    display: none;
+  }
+  
+  .image[data-status="active"] {
+    display: block;
+    z-index: -800;
+  }
